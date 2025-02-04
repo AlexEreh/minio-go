@@ -1,4 +1,4 @@
-module github.com/AlexEreh/minio-go/v7
+module github.com/AlexEreh/minio-go
 
 go 1.17
 
