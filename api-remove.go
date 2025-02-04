@@ -26,7 +26,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/minio/minio-go/v7/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/pkg/s3utils"
 )
 
 //revive:disable
@@ -82,8 +82,8 @@ func (c *Client) RemoveBucketWithOptions(ctx context.Context, bucketName string,
 
 // RemoveBucket deletes the bucket name.
 //
-//  All objects (including all object versions and delete markers).
-//  in the bucket must be deleted before successfully attempting this request.
+//	All objects (including all object versions and delete markers).
+//	in the bucket must be deleted before successfully attempting this request.
 func (c *Client) RemoveBucket(ctx context.Context, bucketName string) error {
 	// Input validation.
 	if err := s3utils.CheckValidBucketName(bucketName); err != nil {

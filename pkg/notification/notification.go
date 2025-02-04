@@ -22,14 +22,15 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/minio/minio-go/v7/pkg/set"
+	"github.com/AlexEreh/minio-go/pkg/set"
 )
 
 // EventType is a S3 notification event associated to the bucket notification configuration
 type EventType string
 
 // The role of all event types are described in :
-// 	http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations
+//
+//	http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations
 const (
 	ObjectCreatedAll                     EventType = "s3:ObjectCreated:*"
 	ObjectCreatedPut                               = "s3:ObjectCreated:Put"

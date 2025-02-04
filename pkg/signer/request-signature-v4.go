@@ -26,7 +26,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/minio/minio-go/v7/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/pkg/s3utils"
 )
 
 // Signature and API related constants.
@@ -42,22 +42,20 @@ const (
 	ServiceTypeSTS = "sts"
 )
 
-//
 // Excerpts from @lsegal -
 // https:/github.com/aws/aws-sdk-js/issues/659#issuecomment-120477258.
 //
-//  User-Agent:
+//	User-Agent:
 //
-//      This is ignored from signing because signing this causes
-//      problems with generating pre-signed URLs (that are executed
-//      by other agents) or when customers pass requests through
-//      proxies, which may modify the user-agent.
+//	    This is ignored from signing because signing this causes
+//	    problems with generating pre-signed URLs (that are executed
+//	    by other agents) or when customers pass requests through
+//	    proxies, which may modify the user-agent.
 //
 //
-//  Authorization:
+//	Authorization:
 //
-//      Is skipped for obvious reasons
-//
+//	    Is skipped for obvious reasons
 var v4IgnoredHeaders = map[string]bool{
 	"Authorization": true,
 	"User-Agent":    true,
@@ -176,12 +174,13 @@ func getSignedHeaders(req http.Request, ignoredHeaders map[string]bool) string {
 // getCanonicalRequest generate a canonical request of style.
 //
 // canonicalRequest =
-//  <HTTPMethod>\n
-//  <CanonicalURI>\n
-//  <CanonicalQueryString>\n
-//  <CanonicalHeaders>\n
-//  <SignedHeaders>\n
-//  <HashedPayload>
+//
+//	<HTTPMethod>\n
+//	<CanonicalURI>\n
+//	<CanonicalQueryString>\n
+//	<CanonicalHeaders>\n
+//	<SignedHeaders>\n
+//	<HashedPayload>
 func getCanonicalRequest(req http.Request, ignoredHeaders map[string]bool, hashedPayload string) string {
 	req.URL.RawQuery = strings.ReplaceAll(req.URL.Query().Encode(), "+", "%20")
 	canonicalRequest := strings.Join([]string{
