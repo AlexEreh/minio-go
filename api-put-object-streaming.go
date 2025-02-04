@@ -38,9 +38,8 @@ import (
 //
 // Following code handles these types of readers.
 //
-//  - *minio.Object
-//  - Any reader which has a method 'ReadAt()'
-//
+//   - *minio.Object
+//   - Any reader which has a method 'ReadAt()'
 func (c *Client) putObjectMultipartStream(ctx context.Context, bucketName, objectName string,
 	reader io.Reader, size int64, opts PutObjectOptions) (info UploadInfo, err error) {
 
@@ -278,7 +277,11 @@ func (c *Client) putObjectMultipartStreamOptionalChecksum(ctx context.Context, b
 	partsInfo := make(map[int]ObjectPart)
 
 	// Create a buffer.
-	buf := make([]byte, partSize)
+	// TODO replace buffered check of MD5 checksum with TeeReader and Hash io.Writer
+	var buf []byte
+	if opts.SendContentMd5 {
+		buf = make([]byte, partSize)
+	}
 
 	// Avoid declaring variables in the for loop
 	var md5Base64 string
