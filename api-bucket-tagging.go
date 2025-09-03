@@ -26,8 +26,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/AlexEreh/minio-go/pkg/s3utils"
-	"github.com/AlexEreh/minio-go/pkg/tags"
+	"github.com/AlexEreh/minio-go/v7/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/v7/pkg/tags"
 )
 
 // GetBucketTagging fetch tagging configuration for a bucket with a

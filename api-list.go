@@ -23,7 +23,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/AlexEreh/minio-go/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/v7/pkg/s3utils"
 )
 
 // ListBuckets list all buckets owned by this authenticated user.

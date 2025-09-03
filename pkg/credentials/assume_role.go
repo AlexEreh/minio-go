@@ -30,7 +30,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AlexEreh/minio-go/pkg/signer"
+	"github.com/AlexEreh/minio-go/v7/pkg/signer"
 	sha256 "github.com/minio/sha256-simd"
 )
 

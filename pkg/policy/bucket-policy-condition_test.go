@@ -21,7 +21,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/AlexEreh/minio-go/pkg/set"
+	"github.com/AlexEreh/minio-go/v7/pkg/set"
 )
 
 // ConditionKeyMap.Add() is called and the result is validated.

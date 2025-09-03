@@ -23,7 +23,7 @@ import (
 	"math"
 	"os"
 
-	"github.com/AlexEreh/minio-go/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/v7/pkg/s3utils"
 )
 
 const nullVersionID = "null"

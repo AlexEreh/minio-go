@@ -27,8 +27,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/AlexEreh/minio-go/pkg/replication"
-	"github.com/AlexEreh/minio-go/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/v7/pkg/replication"
+	"github.com/AlexEreh/minio-go/v7/pkg/s3utils"
 	"github.com/google/uuid"
 )
 

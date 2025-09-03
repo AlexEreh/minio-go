@@ -32,8 +32,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/AlexEreh/minio-go/pkg/encrypt"
-	"github.com/AlexEreh/minio-go/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/v7/pkg/encrypt"
+	"github.com/AlexEreh/minio-go/v7/pkg/s3utils"
 	"github.com/google/uuid"
 )
 

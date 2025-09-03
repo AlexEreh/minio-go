@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AlexEreh/minio-go/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/v7/pkg/s3utils"
 )
 
 func TestParseRFC7231Time(t *testing.T) {

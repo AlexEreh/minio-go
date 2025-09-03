@@ -27,7 +27,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/AlexEreh/minio-go/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/v7/pkg/s3utils"
 )
 
 // GetObject wrapper function that accepts a request context

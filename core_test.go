@@ -28,7 +28,7 @@ import (
 
 	"math/rand"
 
-	"github.com/AlexEreh/minio-go/pkg/credentials"
+	"github.com/AlexEreh/minio-go/v7/pkg/credentials"
 )
 
 const (

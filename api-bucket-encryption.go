@@ -23,8 +23,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/AlexEreh/minio-go/pkg/s3utils"
-	"github.com/AlexEreh/minio-go/pkg/sse"
+	"github.com/AlexEreh/minio-go/v7/pkg/s3utils"
+	"github.com/AlexEreh/minio-go/v7/pkg/sse"
 )
 
 // SetBucketEncryption sets the default encryption configuration on an existing bucket.
